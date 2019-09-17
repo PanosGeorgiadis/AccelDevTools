@@ -1,7 +1,6 @@
-# ScientificFisherThermo_devtools
+# AccelDevTools
 
-## source:
-
-organization: Thermo Fisher Scientific
-internal repository: gitlab/panos_devtools
+A collection of tools for software engineers.
+Mostly automated tasks.
+I try to keep this collection up-to-date with current technology trends (at least with what I personally use).
 
