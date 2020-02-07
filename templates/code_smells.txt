@@ -1,0 +1,21 @@
+# Code Smells
+
+### `2019.01.29` Initializing class members:
+
+_With a constructor and a member initializer list:_
+
+    struct A {
+        A() : i(0) {}
+        int i;
+    };
+
+_Within the body of the constructor:_
+
+    struct A {
+        A() { i = 0; }
+        int i;
+    };
+
+_Because the constructor body can pretty much do anything, it’s better to separate initialization into the member initializer list (technically a part of the constructor body), i.e. use 1st example._
+
+### TODO

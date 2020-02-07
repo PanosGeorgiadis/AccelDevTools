@@ -1,0 +1,41 @@
+# CAPTAIN'S LOG: TRAVEL TO THE SEAS OF GPU/HETEROGENEOUS PROGRAMMING
+
+## 20190130
+
+I started reading https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf
+...and I thought: "well, that's something that I wanted to try out for quite some time now"
+
+Going through the slides, I see that it is easy to pick up:
+I already know C++; I have Visual Studio 2017; I don't need to know graphics programming;
+All I need is apparently to download the CUDA bundle.
+Done, let's install CUDA;
+Whoops, the installer complains about Visual Studio integration (quick googling shows that it might have to do with discovery of additionally installed build tools; I uninstalled the Windows 10 SDK version that makes it complain, install CUDA again, and re-install the SDK again afterwards).
+Note 1: This is for the full installation; of course one might be able to avoid visual studio completely (e.g. you might be more handy with a command prompt and manual compilation), but we are now trying to create a workflow that can serve long-term with some amount of flexibility (i.e. easy to setup & deploy a new project)
+Note 2: Windows SDKs can be installed via Visual Studio Installer.
+
+
+The next step is hands-on practice.
+At this point I also have the documentation in hand (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
+We first open up one of the installed samples, to see what the project settings look like.
+With this action we can determine:
+- what platforms we can build for (e.g. x64)
+- what are the peconfigured header/library locations that projects expect
+- what are the compiler options the projects expect
+
+
+One of the funny things of CUDA is that the CUDA compiler ("nvcc") will be used in combination with the Microsoft build system; the project settings do mention expllicitly which Windows SDK version to use; however, the project's C++ settings subgroup are replaced by the CUDA settings subgroup, so the Windows SDK version is not visible/editable any more!
+
+At the end of the day, I managed to build a sample project and run it in Windows (C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.0\0_Simple\asyncAPI)
+
+I did the same at home; less painful installation (using freshly installed VS2017 community edtition)
+
+## 20190131
+
+I created a good local sandbox structure to exercise my CUDA learning process:
+C:\sandbox\panos_devtools\experimental\CUDA\
+In this directory, copy the common\ dir of the CUDA samples (located in ProgramData), so that all other CUDA projects have access to the common include headers (helper libraries etc)
+Then, each CUDA solution will have its own directory under this root; and will reference the common/inc headers.
+Individual samples can be copied here to be tested out.
+
+I decided to check out the "cdpSimpleQuicksoft" sample. From the name I conclude that it performs a sort on a set of random numbers, delegating execution to the GPU. Digging around in the code a little shows that the sample takes a command-line argument for the test set size. With the default of 128, the execution goes normal, passing "-num_items=1000000" as an argument though has some interesting side-effects: The GPU needs to allocate more cycles for the computation w
+
