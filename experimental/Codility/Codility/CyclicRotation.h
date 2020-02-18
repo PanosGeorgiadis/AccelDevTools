@@ -27,7 +27,7 @@
 #include <iostream>
 using namespace std;
 
-vector<int> solution(vector<int>& A, int K)
+vector<int> solution_cyclicRotation(vector<int>& A, int K)
 {
 	vector<int> result = A;
 	int N = result.size();
@@ -37,15 +37,4 @@ vector<int> solution(vector<int>& A, int K)
 		K--;
 	}
 	return result;
-}
-
-int main()
-{
-	vector<int> test1 = { 3, 8, 9, 7, 6 };
-	int  K = 3;
-	auto result = solution(test1, K);
-	for (auto x : result)
-	{
-		cout << x << ' ';
-	}
 }

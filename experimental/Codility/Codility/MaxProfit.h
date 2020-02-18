@@ -34,7 +34,7 @@
 #include <iostream>
 using namespace std;
 
-int solution(vector<int>& A)
+int solution_maxprofit(vector<int>& A)
 {
 	int current_sum = 0;
 	int sum = 0;
@@ -54,11 +54,4 @@ int solution(vector<int>& A)
 		}
 	}
 	return sum;
-}
-
-int main()
-{
-	vector<int> test1 = { 23171, 21011, 21123, 21366, 21013, 21367 };
-	auto result = solution(test1);
-	cout << "Result: " << result << endl;
 }
