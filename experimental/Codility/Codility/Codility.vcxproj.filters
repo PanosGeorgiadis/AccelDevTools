@@ -29,5 +29,8 @@
     <ClInclude Include="MaxProfit.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="functionpointers.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
