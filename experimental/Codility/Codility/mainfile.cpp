@@ -2,6 +2,7 @@
 #include "MaxProfit.h"
 #include "realtest.h"
 #include "functionpointers.h"
+#include "RingBuffer.h"
 
 using namespace std;
 
@@ -12,5 +13,5 @@ int main(int argc, char *argv[]) {
   run_functionpointers();
   cout << "---------------------------------------------" << endl;
   
-  return 0;
+  return try_ringbuffer();
 }

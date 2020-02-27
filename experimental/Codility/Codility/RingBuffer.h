@@ -108,7 +108,7 @@ private:
 	bool m_isFull = 0;
 };
 
-int main(void)
+int try_ringbuffer(void)
 {
 	RingBuffer<uint32_t> circle(10);
 	std::cout << "\n === CPP Circular buffer check ===\n";
