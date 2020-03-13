@@ -4,12 +4,11 @@
  *  A data structure for storing information with FIFO (oldest-first) data access
  *  and a constant maximum capacity
  */
-#pragma once
-
 #include <iostream>
 
 #include <memory>
 #include <mutex>
+#pragma once
 
 
 template <class T>
@@ -159,12 +158,12 @@ int try_ringbuffer(void)
 	std::cout << "Reading back values: ";
 	while (!circle.empty())
 	{
-		std::cout << circle.get() << " ");
+		std::cout << circle.get() << " ";
 	}
 	std::cout << std::endl;
 
-	std::cout << "Empty: %d\n", circle.empty());
-	std::cout << "Full: %d\n", circle.full());
+	std::cout << "Empty: %d\n", circle.empty();
+	std::cout << "Full: %d\n", circle.full();
 
 	return 0;
 }

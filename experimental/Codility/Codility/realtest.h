@@ -4,6 +4,7 @@
 #include <iostream>
 #include <limits>
 #include <map>
+#pragma once
 
 using namespace std;
 

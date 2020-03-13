@@ -18,6 +18,15 @@
     <ClCompile Include="mainfile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="thread_example.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="optional_cpp17.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="realtest.h">

@@ -3,15 +3,19 @@
 #include "realtest.h"
 #include "functionpointers.h"
 #include "RingBuffer.h"
+#include "thread_example.h"
 
 using namespace std;
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
+  //cout << "---------------------------------------------" << endl;
+  //run_functionpointers();
+  //cout << "---------------------------------------------" << endl;
+  //auto x = try_ringbuffer();
 
-
-  cout << "---------------------------------------------" << endl;
-  run_functionpointers();
-  cout << "---------------------------------------------" << endl;
+  auto y = runThreadExample();
   
-  return try_ringbuffer();
+
+  return 0;
 }

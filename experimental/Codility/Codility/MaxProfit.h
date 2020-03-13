@@ -32,6 +32,8 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#pragma once
+
 using namespace std;
 
 int solution_maxprofit(vector<int>& A)

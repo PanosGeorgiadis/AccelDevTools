@@ -140,6 +140,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="mainfile.cpp" />
+    <ClCompile Include="optional_cpp17.h" />
+    <ClCompile Include="thread_example.cpp" />
+    <ClCompile Include="thread_example.h" />
     <ClInclude Include="functionpointers.h" />
     <ClInclude Include="realtest.h">
       <FileType>CppCode</FileType>
