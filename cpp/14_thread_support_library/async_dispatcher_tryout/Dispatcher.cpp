@@ -1,11 +1,8 @@
-// Copyright (c) 2016 by FEI Company
-// All rights reserved. This file includes confidential and proprietary information of FEI Company.
-
 #include "stdafx.h"
 
-#include "Fei/Dispatcher.h"
-#include "Fei/dbgstream.h"
-#include "Fei/stringbuilder.h"
+#include "inc/Dispatcher.h"
+#include "inc/dbgstream.h"
+#include "inc/stringbuilder.h"
 #include "Timing.h"
 
 namespace
@@ -53,11 +50,11 @@ namespace
 
 	void LogUnhandledException(const std::string& what)
 	{
-		Fei::cdbg << "Dispatcher::Notify(): exception: " << what << "\n";
+		my::cdbg << "Dispatcher::Notify(): exception: " << what << "\n";
 	}
 }
 
-namespace Fei {
+namespace TaskExecution {
 
 Dispatcher::CallData::CallData(const ScheduledCall&  scheduledCall, const std::chrono::steady_clock::time_point& at, const std::function<void()>& fn) :
 	m_scheduledCall(scheduledCall),
@@ -233,7 +230,7 @@ unsigned int Dispatcher::GetCallId() const
 }
 
 
-} // namespace Fei
+}
 
 namespace
 {

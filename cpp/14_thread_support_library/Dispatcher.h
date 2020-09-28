@@ -1,6 +1,3 @@
-// Copyright (c) 2016 by FEI Company
-// All rights reserved. This file includes confidential and proprietary information of FEI Company.
-
 #pragma once
 
 #include <atomic>
@@ -8,14 +5,12 @@
 #include <cassert>
 #include <mutex>
 #include <thread>
-#include "Fei/dbgstream.h"
+#include "inc/dbgstream.h"
 
-#include "Fei/ScheduledCall.h"
-#include "Fei/DispatcherItf.h"
+#include "inc/ScheduledCall.h"
+#include "inc/DispatcherItf.h"
 
-#pragma comment(lib, "FeiCppLib.lib")
-
-namespace Fei {
+namespace TaskExecution {
 
 class Dispatcher : public DispatcherItf
 {
@@ -87,4 +82,4 @@ private:
     std::function<void(const std::string&)> m_onUnhandledException;
 };
 
-} // namespace Fei
+}
