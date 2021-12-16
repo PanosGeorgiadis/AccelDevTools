@@ -9,9 +9,7 @@ template <class itemclass> class CObjectCollectionEnumVariantImpl ;
 #pragma push_macro("new")
 #undef new
 
-// *****************************************************************************
-// A simple container of elements of type T
-// *****************************************************************************
+/// \brief A simple container of elements of type T
 template <class T>
 class CpgSimpleArray
 {
@@ -30,7 +28,7 @@ public:
           m_aT = NULL;
      }
 
-// Operations
+     // Operations
      int GetSize() const
      {
           return m_nSize;
@@ -137,7 +135,7 @@ public:
           return m_aT;
      }
 
-// Implementation
+     // Implementation
      class Wrapper
      {
      public:
@@ -171,6 +169,9 @@ public:
      }
 };
 
+// *****************************************************************************
+// A reference-counting container class for elements of type T
+// *****************************************************************************
 template <class T>
 class CRefCountedArray
 {
@@ -455,7 +456,7 @@ public:
 };
 
 // *****************************************************************************
-// TODO: documentation
+// A class template for objects that are children of a parent object
 // *****************************************************************************
 template<class T, class TParent> class ParentChildImpl : public T
 {
@@ -574,9 +575,7 @@ private:
      }
 };
 
-// *****************************************************************************
-// generic reference-counting object
-// *****************************************************************************
+/// \brief generic reference-counting object
 class ParentChildBase
 {
 public:
