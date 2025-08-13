@@ -128,7 +128,7 @@ int main(){
 
 **dynamic**
 
-- run-time
+- run-time: performed using virtual functions
 
 
 
