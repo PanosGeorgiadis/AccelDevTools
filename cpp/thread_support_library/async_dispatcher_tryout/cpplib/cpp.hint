@@ -1,0 +1,14 @@
+#pragma once
+
+#define CPP_COM_CALL(ptr,fun)()
+#define CPP_COM_CALL(ptr,fun)(_)
+#define CPP_COM_CALL(ptr,fun)(_,_)
+#define CPP_COM_CALL(ptr,fun)(_,_,_)
+#define CPP_COM_CALL(ptr,fun)(_,_,_,_)
+#define CPP_BEGIN_ENUM_MAP(from,to)
+#define CPP_ENUM_ENTRY(from,to)
+#define CPP_ENUM_ENTRY_STRING(from)
+#define CPP_ENUM_ENTRY_WSTRING(from)
+#define CPP_ENUM_ENTRY_DEFAULT(from, to)
+#define CPP_END_ENUM_MAP()
+#define CPP_END_ENUM_MAP_EX(from, to)
