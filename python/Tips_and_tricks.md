@@ -4,3 +4,7 @@
 https://www.youtube.com/watch?v=belS2Ek4-ow
 
 
+## Type Hints (PEP 484)
+
+- Python v. 3.5
+- Mypy: static type checker for Python
